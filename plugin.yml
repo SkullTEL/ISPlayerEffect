@@ -1,0 +1,24 @@
+name: ISPlayerEffect
+version: 1.2.1
+api: [1.12.0]
+author: SkullTEL
+description: IServerMan
+main: IServer\ISPlayerEffect
+
+commands:
+ pe:
+  usage: /pe <EffectID><Duration><Amplifier>
+permissions:
+  IS:
+    default: false
+    description: "IS cmd."
+    children:
+      IS.*:
+        default: false
+        description: "Server cmd."
+      IS.command.op:
+        default: op
+        description: "op cmd."
+      IS.command:
+        default: true
+        description: "player cmd."
